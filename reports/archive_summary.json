@@ -1,0 +1,230 @@
+{
+  "generated_at": "2026-05-08T15:34:44.601910+00:00",
+  "archive": {
+    "total_items": 0,
+    "sources": 0,
+    "counts": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+    },
+    "priority_items": 0,
+    "priority_notify_items": 0,
+    "highest_priority_level": 0,
+    "latest_collected_at": "",
+    "configured_watch_rules": 3,
+    "rules_with_excludes": 0,
+    "rules_with_source_overrides": 0
+  },
+  "windows": {
+    "7d": {
+      "total_items": 0,
+      "sources": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "highest_priority_level": 0,
+      "latest_collected_at": ""
+    },
+    "30d": {
+      "total_items": 0,
+      "sources": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "highest_priority_level": 0,
+      "latest_collected_at": ""
+    }
+  },
+  "records": [],
+  "recent_overall": [],
+  "recent_by_category": {
+    "A": [],
+    "B": [],
+    "C": []
+  },
+  "priority_hits": [],
+  "featured_sources": [
+    {
+      "source": "Cloudflare Blog",
+      "total_items": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "latest_collected_at": "",
+      "recent_items": []
+    },
+    {
+      "source": "APNIC Blog",
+      "total_items": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "latest_collected_at": "",
+      "recent_items": []
+    },
+    {
+      "source": "RIPE Labs",
+      "total_items": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "latest_collected_at": "",
+      "recent_items": []
+    },
+    {
+      "source": "NANOG",
+      "total_items": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "latest_collected_at": "",
+      "recent_items": []
+    },
+    {
+      "source": "Cisco Networking Blog",
+      "total_items": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "latest_collected_at": "",
+      "recent_items": []
+    },
+    {
+      "source": "Juniper Networks Blog",
+      "total_items": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "latest_collected_at": "",
+      "recent_items": []
+    },
+    {
+      "source": "AWS Networking and Content Delivery Blog",
+      "total_items": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "latest_collected_at": "",
+      "recent_items": []
+    },
+    {
+      "source": "Microsoft Azure Networking Blog",
+      "total_items": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "priority_items": 0,
+      "priority_notify_items": 0,
+      "latest_collected_at": "",
+      "recent_items": []
+    }
+  ],
+  "watch_activity": {
+    "top_rules_7d": [],
+    "source_ranking": []
+  },
+  "watch_rules": [
+    {
+      "name": "Critical routing and internet stability",
+      "priority_level": 3,
+      "notify": true,
+      "notify_cooldown_hours": 12.0,
+      "exclude_keywords": [],
+      "override_count": 0,
+      "source_overrides": [],
+      "matched_items": 0,
+      "notify_items": 0,
+      "matches_7d": 0,
+      "matches_30d": 0,
+      "latest_matched_at": "",
+      "category_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "top_sources": [],
+      "recent_matches": []
+    },
+    {
+      "name": "Cloud and edge networking",
+      "priority_level": 2,
+      "notify": true,
+      "notify_cooldown_hours": 8.0,
+      "exclude_keywords": [],
+      "override_count": 0,
+      "source_overrides": [],
+      "matched_items": 0,
+      "notify_items": 0,
+      "matches_7d": 0,
+      "matches_30d": 0,
+      "latest_matched_at": "",
+      "category_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "top_sources": [],
+      "recent_matches": []
+    },
+    {
+      "name": "Network automation and observability",
+      "priority_level": 1,
+      "notify": false,
+      "notify_cooldown_hours": 0.0,
+      "exclude_keywords": [],
+      "override_count": 0,
+      "source_overrides": [],
+      "matched_items": 0,
+      "notify_items": 0,
+      "matches_7d": 0,
+      "matches_30d": 0,
+      "latest_matched_at": "",
+      "category_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "top_sources": [],
+      "recent_matches": []
+    }
+  ]
+}

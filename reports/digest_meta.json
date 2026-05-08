@@ -1,0 +1,23 @@
+{
+  "updated_at": null,
+  "new_items": 0,
+  "counts": {
+    "A": 0,
+    "B": 0,
+    "C": 0
+  },
+  "displayed_counts": {
+    "A": 0,
+    "B": 0,
+    "C": 0
+  },
+  "failed_sources": 0,
+  "failed_source_names": [],
+  "fallback_attempted": 0,
+  "fallback_succeeded": 0,
+  "fallback_rescued_names": [],
+  "priority_hits": 0,
+  "priority_notify_hits": 0,
+  "highest_priority_level": 0,
+  "source_log": {}
+}

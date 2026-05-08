@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Network Tech Watch Archive Viewer</title>
+    <style>
+      body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f7f8fb; color: #172033; }
+      header { padding: 24px; background: #ffffff; border-bottom: 1px solid #d9deea; }
+      main { max-width: 1120px; margin: 0 auto; padding: 24px; }
+      .controls { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-bottom: 20px; }
+      input, select { width: 100%; box-sizing: border-box; padding: 9px 10px; border: 1px solid #c9cfdd; border-radius: 6px; background: #fff; }
+      .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+      article { background: #fff; border: 1px solid #d9deea; border-radius: 8px; padding: 16px; }
+      h1, h2, h3 { margin-top: 0; }
+      a { color: #0b5cad; }
+      .meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+      .pill { border: 1px solid #c9cfdd; border-radius: 999px; padding: 3px 8px; font-size: 12px; background: #f7f8fb; }
+      .priority { border-color: #b45309; color: #7c2d12; background: #fff7ed; }
+      .empty { padding: 20px; background: #fff; border: 1px dashed #c9cfdd; border-radius: 8px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Network Tech Watch Archive Viewer</h1>
+      <div id="snapshot"></div>
+    </header>
+    <main>
+      <section class="controls" aria-label="filters">
+        <input id="queryInput" placeholder="Search title, summary, source, watch rule">
+        <select id="categorySelect"><option value="">All categories</option><option>A</option><option>B</option><option>C</option></select>
+        <select id="sourceSelect"><option value="">All sources</option></select>
+        <select id="prioritySelect"><option value="">All articles</option><option value="priority">Priority only</option></select>
+      </section>
+      <section id="results" class="cards"></section>
+    </main>
+    <script id="archive-viewer-data" type="application/json">{"generated_at": "2026-05-08T15:34:44.601910+00:00", "archive": {"total_items": 0, "sources": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "highest_priority_level": 0, "latest_collected_at": "", "configured_watch_rules": 3, "rules_with_excludes": 0, "rules_with_source_overrides": 0}, "windows": {"7d": {"total_items": 0, "sources": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "highest_priority_level": 0, "latest_collected_at": ""}, "30d": {"total_items": 0, "sources": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "highest_priority_level": 0, "latest_collected_at": ""}}, "records": [], "recent_overall": [], "recent_by_category": {"A": [], "B": [], "C": []}, "priority_hits": [], "featured_sources": [{"source": "Cloudflare Blog", "total_items": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "latest_collected_at": "", "recent_items": []}, {"source": "APNIC Blog", "total_items": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "latest_collected_at": "", "recent_items": []}, {"source": "RIPE Labs", "total_items": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "latest_collected_at": "", "recent_items": []}, {"source": "NANOG", "total_items": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "latest_collected_at": "", "recent_items": []}, {"source": "Cisco Networking Blog", "total_items": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "latest_collected_at": "", "recent_items": []}, {"source": "Juniper Networks Blog", "total_items": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "latest_collected_at": "", "recent_items": []}, {"source": "AWS Networking and Content Delivery Blog", "total_items": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "latest_collected_at": "", "recent_items": []}, {"source": "Microsoft Azure Networking Blog", "total_items": 0, "counts": {"A": 0, "B": 0, "C": 0}, "priority_items": 0, "priority_notify_items": 0, "latest_collected_at": "", "recent_items": []}], "watch_activity": {"top_rules_7d": [], "source_ranking": []}, "watch_rules": [{"name": "Critical routing and internet stability", "priority_level": 3, "notify": true, "notify_cooldown_hours": 12.0, "exclude_keywords": [], "override_count": 0, "source_overrides": [], "matched_items": 0, "notify_items": 0, "matches_7d": 0, "matches_30d": 0, "latest_matched_at": "", "category_counts": {"A": 0, "B": 0, "C": 0}, "top_sources": [], "recent_matches": []}, {"name": "Cloud and edge networking", "priority_level": 2, "notify": true, "notify_cooldown_hours": 8.0, "exclude_keywords": [], "override_count": 0, "source_overrides": [], "matched_items": 0, "notify_items": 0, "matches_7d": 0, "matches_30d": 0, "latest_matched_at": "", "category_counts": {"A": 0, "B": 0, "C": 0}, "top_sources": [], "recent_matches": []}, {"name": "Network automation and observability", "priority_level": 1, "notify": false, "notify_cooldown_hours": 0.0, "exclude_keywords": [], "override_count": 0, "source_overrides": [], "matched_items": 0, "notify_items": 0, "matches_7d": 0, "matches_30d": 0, "latest_matched_at": "", "category_counts": {"A": 0, "B": 0, "C": 0}, "top_sources": [], "recent_matches": []}]}</script>
+    <script>
+      const data = JSON.parse(document.getElementById("archive-viewer-data").textContent);
+      const records = Array.isArray(data.records) ? data.records : [];
+      const sourceSelect = document.getElementById("sourceSelect");
+      const queryInput = document.getElementById("queryInput");
+      const categorySelect = document.getElementById("categorySelect");
+      const prioritySelect = document.getElementById("prioritySelect");
+      const results = document.getElementById("results");
+      const snapshot = document.getElementById("snapshot");
+      const archive = data.archive || {};
+      snapshot.textContent = `${archive.total_items || 0} archived articles, ${archive.priority_items || 0} priority hits`;
+      [...new Set(records.map((record) => record.source).filter(Boolean))].sort().forEach((source) => {
+        const option = document.createElement("option");
+        option.value = source;
+        option.textContent = source;
+        sourceSelect.appendChild(option);
+      });
+      function escapeHtml(value) {
+        return String(value || "").replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;"
+        }[char]));
+      }
+      function safeUrl(value) {
+        try {
+          const url = new URL(String(value || ""), window.location.href);
+          return ["http:", "https:"].includes(url.protocol) ? url.href : "#";
+        } catch (_error) {
+          return "#";
+        }
+      }
+      function textFor(record) {
+        return [record.title, record.summary, record.source, record.category, ...(record.watch_hits || [])].join(" ").toLowerCase();
+      }
+      function render() {
+        const query = queryInput.value.trim().toLowerCase();
+        const category = categorySelect.value;
+        const source = sourceSelect.value;
+        const priority = prioritySelect.value;
+        const filtered = records.filter((record) => {
+          if (category && record.category !== category) return false;
+          if (source && record.source !== source) return false;
+          if (priority === "priority" && !(record.watch_hits || []).length) return false;
+          if (query && !textFor(record).includes(query)) return false;
+          return true;
+        }).slice(0, 100);
+        if (!filtered.length) {
+          results.innerHTML = '<div class="empty">No matching archived articles.</div>';
+          return;
+        }
+        results.innerHTML = filtered.map((record) => {
+          const watches = (record.watch_hits || []).map((item) => `<span class="pill priority">${escapeHtml(item)}</span>`).join("");
+          return `<article><h3><a href="${escapeHtml(safeUrl(record.link))}" target="_blank" rel="noreferrer noopener">${escapeHtml(record.title || "(untitled)")}</a></h3><div class="meta"><span class="pill">${escapeHtml(record.category || "-")}</span><span class="pill">${escapeHtml(record.source || "-")}</span>${watches}</div><p>${escapeHtml(record.summary || "")}</p></article>`;
+        }).join("");
+      }
+      [queryInput, categorySelect, sourceSelect, prioritySelect].forEach((node) => node.addEventListener("input", render));
+      render();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+sources:
+  - name: Cloudflare Blog
+    type: rss
+    url: https://blog.cloudflare.com/rss/
+    site_url: https://blog.cloudflare.com/
+    max_items: 80
+    recent_days: 45
+    category_hints:
+      - dns
+      - cdn
+      - edge
+      - ddos
+      - security
+  - name: APNIC Blog
+    type: rss
+    url: https://blog.apnic.net/feed/
+    site_url: https://blog.apnic.net/
+    max_items: 80
+    recent_days: 60
+    category_hints:
+      - bgp
+      - rpki
+      - ipv6
+      - routing
+  - name: RIPE Labs
+    type: rss
+    url: https://labs.ripe.net/feed/
+    site_url: https://labs.ripe.net/
+    max_items: 80
+    recent_days: 60
+    category_hints:
+      - bgp
+      - rpki
+      - dns
+      - routing
+  - name: NANOG
+    type: rss
+    url: https://www.nanog.org/feed/
+    site_url: https://www.nanog.org/news/
+    max_items: 60
+    recent_days: 60
+    category_hints:
+      - routing
+      - peering
+      - operations
+  - name: Cisco Networking Blog
+    type: rss
+    url: https://blogs.cisco.com/networking/feed
+    site_url: https://blogs.cisco.com/networking
+    max_items: 60
+    recent_days: 45
+    category_hints:
+      - enterprise networking
+      - sd-wan
+      - wifi
+      - automation
+  - name: Juniper Networks Blog
+    type: rss
+    url: https://blogs.juniper.net/feed/
+    site_url: https://blogs.juniper.net/
+    max_items: 60
+    recent_days: 45
+    category_hints:
+      - routing
+      - automation
+      - sd-wan
+  - name: AWS Networking and Content Delivery Blog
+    type: rss
+    url: https://aws.amazon.com/blogs/networking-and-content-delivery/feed/
+    site_url: https://aws.amazon.com/blogs/networking-and-content-delivery/
+    max_items: 80
+    recent_days: 45
+    category_hints:
+      - vpc
+      - load balancer
+      - transit gateway
+      - cloud networking
+  - name: Microsoft Azure Networking Blog
+    type: rss
+    url: https://azure.microsoft.com/en-us/blog/topics/networking/feed/
+    site_url: https://azure.microsoft.com/en-us/blog/topics/networking/
+    max_items: 80
+    recent_days: 45
+    category_hints:
+      - cloud networking
+      - private link
+      - load balancer
+  - name: Google Cloud Networking Blog
+    type: rss
+    url: https://cloud.google.com/blog/products/networking/rss
+    site_url: https://cloud.google.com/blog/products/networking
+    max_items: 80
+    recent_days: 45
+    category_hints:
+      - cloud networking
+      - vpc
+      - load balancer
+  - name: Cilium Blog
+    type: rss
+    url: https://cilium.io/blog/index.xml
+    site_url: https://cilium.io/blog/
+    max_items: 80
+    recent_days: 60
+    category_hints:
+      - cilium
+      - ebpf
+      - kubernetes networking
+      - cni
+  - name: Kubernetes Blog
+    type: rss
+    url: https://kubernetes.io/feed.xml
+    site_url: https://kubernetes.io/blog/
+    max_items: 100
+    recent_days: 45
+    category_hints:
+      - kubernetes networking
+      - cni
+      - service mesh
+  - name: Fastly Blog
+    type: rss
+    url: https://www.fastly.com/blog/rss.xml
+    site_url: https://www.fastly.com/blog/
+    max_items: 60
+    recent_days: 45
+    category_hints:
+      - cdn
+      - edge
+      - tls
+      - ddos
+  - name: Akamai Blog
+    type: rss
+    url: https://www.akamai.com/blog/rss.xml
+    site_url: https://www.akamai.com/blog
+    max_items: 60
+    recent_days: 45
+    category_hints:
+      - cdn
+      - edge
+      - security
+      - ddos
+  - name: IETF Blog
+    type: rss
+    url: https://www.ietf.org/blog/feed.xml
+    site_url: https://www.ietf.org/blog/
+    max_items: 60
+    recent_days: 90
+    category_hints:
+      - standards
+      - protocol
+      - quic
+      - tls
+
+watch_rules:
+  - name: Critical routing and internet stability
+    priority_level: 3
+    notify: true
+    notify_cooldown_hours: 12
+    categories:
+      - A
+      - B
+    keywords:
+      - BGP
+      - RPKI
+      - route leak
+      - routing outage
+      - outage
+      - DDoS
+      - DNSSEC
+  - name: Cloud and edge networking
+    priority_level: 2
+    notify: true
+    notify_cooldown_hours: 8
+    categories:
+      - A
+      - B
+    keywords:
+      - VPC
+      - load balancer
+      - CDN
+      - edge
+      - transit gateway
+      - private link
+  - name: Network automation and observability
+    priority_level: 1
+    notify: false
+    categories:
+      - A
+      - B
+    keywords:
+      - NetDevOps
+      - automation
+      - telemetry
+      - OpenTelemetry
+      - eBPF
+      - Cilium
